@@ -98,19 +98,27 @@ game.PlayerBeerEntity = me.Entity.extend({
                 // set the jumping flag
                 this.body.jumping = true;
                 if ((this.pos.x > 428) && (this.pos.x < 596)){
-                    me.audio.play("bois");
+                    me.audio.play("glou");
                     if (!this.renderable.isCurrentAnimation("beerEmpty")) {
                         this.renderable.setCurrentAnimation("beerEmpty");
                         beerEmpty = true;
                     };
                     game.data.score += 100;
                 }else{
-                    game.data.score -= 500;
+                    me.audio.play("bouh");
+                    game.data.score -= 200;
                 }
 
             }
 
         };
+
+        if(game.data.score>1000){
+            me.state.change(me.state.VICTORY);
+        }
+        if(game.data.score<-500){
+            me.state.change(me.state.GAMEOVER);
+        }
 
         // apply physics to the body (this moves the entity)
         this.body.update(dt);
