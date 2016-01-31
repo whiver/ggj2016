@@ -47,6 +47,7 @@ var game = {
         me.state.set(me.state.BEER, new game.PlayScreenBeer());
         me.state.set(me.state.GAMEOVER, new game.GameOverScreen());
         me.state.set(me.state.VICTORY, new game.PlayScreenVictory());
+        me.state.set(me.state.MENU, new game.TitleScreen());
 
         // add our player entity in the entity pool
         me.pool.register("player-run", game.PlayerSportEntity);
@@ -59,9 +60,12 @@ var game = {
         me.input.bindKey(me.input.KEY.LEFT,  "left");
         me.input.bindKey(me.input.KEY.RIGHT, "right");
         me.input.bindKey(me.input.KEY.SPACE, "jump", true);
+        me.input.bindKey(me.input.KEY.P, "p", true);
+        me.input.bindKey(me.input.KEY.A, "a", true);
+        me.input.bindKey(me.input.KEY.N, "n", true);
 
         // Start the game.
-        me.state.change(me.state.SPORT);
+        me.state.change(me.state.MENU);
 
     }
 };
