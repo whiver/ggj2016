@@ -27,6 +27,7 @@ var game = {
         me.state.SPORT = 10;
         me.state.BEER = 11;
         me.state.VICTORY = 12;
+        me.state.MORPIONPLAY = 15;
 
         // Initialize the audio.
         me.audio.init("mp3");
@@ -41,6 +42,9 @@ var game = {
         me.state.change(me.state.LOADING);
     },
 
+        // set a global fading transition for the screen
+        me.state.transition("fade", "#FFFFFF", 250);
+
     // Run on game resources loaded.
     "loaded" : function () {
         me.state.set(me.state.SPORT, new game.PlayScreenSport());
@@ -48,6 +52,7 @@ var game = {
         me.state.set(me.state.GAMEOVER, new game.GameOverScreen());
         me.state.set(me.state.VICTORY, new game.PlayScreenVictory());
         me.state.set(me.state.MENU, new game.TitleScreen());
+        me.state.set(me.state.MORPIONPLAY, new game.PlayScreenMorpion());
 
         // add our player entity in the entity pool
         me.pool.register("player-run", game.PlayerSportEntity);
@@ -63,6 +68,8 @@ var game = {
         me.input.bindKey(me.input.KEY.P, "p", true);
         me.input.bindKey(me.input.KEY.A, "a", true);
         me.input.bindKey(me.input.KEY.N, "n", true);
+        me.input.bindKey(me.input.KEY.X, "click");
+        me.input.bindPointer(me.input.mouse.LEFT, me.input.KEY.X);
 
         // Start the game.
         me.state.change(me.state.MENU);
