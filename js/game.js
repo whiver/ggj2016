@@ -26,6 +26,7 @@ var game = {
         
         me.state.SPORT = 10;
         me.state.BEER = 11;
+        me.state.VICTORY = 12;
 
         // Initialize the audio.
         me.audio.init("mp3");
@@ -45,6 +46,7 @@ var game = {
         me.state.set(me.state.SPORT, new game.PlayScreenSport());
         me.state.set(me.state.BEER, new game.PlayScreenBeer());
         me.state.set(me.state.GAMEOVER, new game.GameOverScreen());
+        me.state.set(me.state.VICTORY, new game.PlayScreenVictory());
 
         // add our player entity in the entity pool
         me.pool.register("player-run", game.PlayerSportEntity);
