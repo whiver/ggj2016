@@ -12,7 +12,7 @@ game.PlayerSportEntity = me.Entity.extend({
 
         // disable gravity
         this.body.gravity = 4;
-        this.body.setVelocity(20, 25);
+        this.body.setVelocity(15, 30);
 
         // set the display to follow our position on both axis
         me.game.viewport.follow(this.pos, me.game.viewport.AXIS.BOTH);
