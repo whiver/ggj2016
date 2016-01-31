@@ -4,7 +4,7 @@ game.PlayScreenVictory = me.ScreenObject.extend({
      */
     onResetEvent: function() {
         me.levelDirector.loadLevel("victory-level");
-
+        
         me.timer.setTimeout(function () {me.state.change(me.state.SPORT)},20000);
     },
 

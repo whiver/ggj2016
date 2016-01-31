@@ -5,7 +5,8 @@ game.PlayScreenVictory = me.ScreenObject.extend({
     onResetEvent: function() {
         me.levelDirector.loadLevel("victory-level");
         me.audio.stopTrack();
-        me.audio.play("victory")
+        me.audio.play("victory");
+        me.timer.setTimeout(function () {me.state.change(me.state.SPORT)},5000);
     },
 
     /**
