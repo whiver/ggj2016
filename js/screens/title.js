@@ -4,6 +4,7 @@ game.TitleScreen = me.ScreenObject.extend({
      *  action to perform on state change
      */
     onResetEvent : function() {
+        me.audio.playTrack("theme");
 
         // title screen
         me.game.world.addChild(
@@ -76,5 +77,6 @@ game.TitleScreen = me.ScreenObject.extend({
         me.input.unbindKey(me.input.KEY.ENTER);
         me.input.unbindPointer(me.input.mouse.LEFT);
         me.event.unsubscribe(this.handler);
+        me.audio.stopTrack();
     }
 });
