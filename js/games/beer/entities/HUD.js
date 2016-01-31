@@ -49,9 +49,9 @@ game.HUD.ScoreItem = me.Renderable.extend({
         // local copy of the global score
         this.score = -1;
 
-        this._super(me.BitmapFont, 'init', [x, y, 700, 10])
-        this.font.set("right");
-        this.time
+        //this._super(me.BitmapFont, 'init', [x, y, 700, 10])
+        //this.font.set("right");
+        //this.time
     },
 
     /**

@@ -30,11 +30,14 @@ game.PlayerEntity = me.Entity.extend({
         });
 
         // define a basic walking animation (using all frames)
-        this.renderable.addAnimation("walk left",  [4, 4, 4, 4], 250);
-        this.renderable.addAnimation("walk right",  [0, 0, 0, 0], 250);
+        this.renderable.addAnimation("beerFull",  [0, 0, 0, 0], 50);
+        this.renderable.addAnimation("beerEmpty",  [3, 3, 3, 3], 50);
+        this.renderable.addAnimation("beerFullFail",  [0, 1, 0, 1], 50);
+        this.renderable.addAnimation("beerEmptyFail",  [3, 4, 3, 4], 50);
+        this.renderable.addAnimation("beerFullReady",  [2, 2, 2, 2], 50);
 
         // set the standing animation as default
-        this.renderable.setCurrentAnimation("walk right");
+        this.renderable.setCurrentAnimation("beerFull");
         tmpCurrent = 0;
         beerEmpty = false;
         timer=0;
@@ -79,10 +82,11 @@ game.PlayerEntity = me.Entity.extend({
             //this._super(me.Entity, 'init', [x, y , settings]);
         }
 
-        if(this.pos.x>700 || this.pos.x<200){
-            if (!this.renderable.isCurrentAnimation("walk right")) {
-                this.renderable.setCurrentAnimation("walk right");
+        if((this.pos.x>860 || this.pos.x<100) && beerEmpty){
+            if (!this.renderable.isCurrentAnimation("beerFull")) {
+                this.renderable.setCurrentAnimation("beerFull");
             };
+            beerEmpty = false;
         };
 
         if (me.input.isKeyPressed('jump')) {
@@ -93,14 +97,15 @@ game.PlayerEntity = me.Entity.extend({
                 this.body.vel.y = -this.body.maxVel.y * me.timer.tick;
                 // set the jumping flag
                 this.body.jumping = true;
-                if ((this.pos.x > 400) && (this.pos.x < 500)){
+                if ((this.pos.x > 428) && (this.pos.x < 596)){
                     me.audio.play("bois");
-                    if (!this.renderable.isCurrentAnimation("walk left")) {
-                        this.renderable.setCurrentAnimation("walk left");
+                    if (!this.renderable.isCurrentAnimation("beerEmpty")) {
+                        this.renderable.setCurrentAnimation("beerEmpty");
+                        beerEmpty = true;
                     };
                     game.data.score += 100;
                 }else{
-                    game.data.score -= 200;
+                    game.data.score -= 500;
                 }
 
             }
