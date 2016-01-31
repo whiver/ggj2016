@@ -12,7 +12,7 @@ var game = {
     // Run on page load.
     "onload" : function () {
         // Initialize the video.
-        if (!me.video.init(960, 512, {wrapper : "screen", scale : "auto"})) {
+        if (!me.video.init(1000, 700, {wrapper : "screen", scale : "auto"})) {
             alert("Your browser does not support HTML5 canvas.");
             return;
         }
@@ -23,12 +23,9 @@ var game = {
                 me.plugin.register.defer(this, me.debug.Panel, "debug", me.input.KEY.V);
             });
         }
-        
-        me.state.SPORT = 10;
-        me.state.BEER = 11;
 
         // Initialize the audio.
-        me.audio.init("mp3");
+        me.audio.init("mp3,ogg");
 
         // Set a callback to run when loading is complete.
         me.loader.onload = this.loaded.bind(this);
@@ -42,23 +39,20 @@ var game = {
 
     // Run on game resources loaded.
     "loaded" : function () {
-        me.state.set(me.state.SPORT, new game.PlayScreenSport());
-        me.state.set(me.state.BEER, new game.PlayScreenBeer());
-        me.state.set(me.state.GAMEOVER, new game.GameOverScreen());
+        me.state.set(me.state.MENU, new game.TitleScreen());
+        me.state.set(me.state.PLAY, new game.PlayScreen());
 
         // add our player entity in the entity pool
-        me.pool.register("player-run", game.PlayerSportEntity);
-        me.pool.register("player_victory", game.PlayerVictoryEntity);
-        me.pool.register("obstacle_runner", game.ObstacleSportEntity);
-        me.pool.register("mainBeerPlayer", game.PlayerBeerEntity);
+        me.pool.register("mainPlayer", game.PlayerEntity);
+        me.pool.register("goldCoin", game.CoinEntity);
+        me.pool.register("flyingEnemy", game.EnemyEntity);
 
         // enable the keyboard
         me.input.bindKey(me.input.KEY.LEFT,  "left");
         me.input.bindKey(me.input.KEY.RIGHT, "right");
-        me.input.bindKey(me.input.KEY.SPACE, "jump", true);
+        me.input.bindKey(me.input.KEY.X,     "jump", true);
 
         // Start the game.
-        me.state.change(me.state.SPORT);
-
+        me.state.change(me.state.MENU);
     }
 };

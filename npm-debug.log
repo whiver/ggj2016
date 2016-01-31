@@ -1,0 +1,122 @@
+0 info it worked if it ends with ok
+1 verbose cli [ '/usr/bin/nodejs', '/usr/bin/npm', 'install' ]
+2 info using npm@1.3.10
+3 info using node@v0.10.25
+4 warn package.json boilerplate@2.1.3 No repository field.
+5 verbose readDependencies using package.json deps
+6 verbose install where, deps [ '/home/dech94/Documents/git/ggj2016',
+6 verbose install   [ 'grunt',
+6 verbose install     'grunt-asar',
+6 verbose install     'grunt-contrib-clean',
+6 verbose install     'grunt-contrib-concat',
+6 verbose install     'grunt-contrib-connect',
+6 verbose install     'grunt-contrib-copy',
+6 verbose install     'grunt-contrib-uglify',
+6 verbose install     'grunt-contrib-watch',
+6 verbose install     'grunt-download-electron',
+6 verbose install     'grunt-processhtml',
+6 verbose install     'grunt-replace' ] ]
+7 info preinstall boilerplate@2.1.3
+8 verbose readDependencies using package.json deps
+9 verbose already installed skipping grunt-contrib-clean@^0.7.0 /home/dech94/Documents/git/ggj2016
+10 verbose cache add [ 'grunt-asar@bwin/grunt-asar#update-asar', null ]
+11 verbose cache add name=undefined spec="grunt-asar@bwin/grunt-asar#update-asar" args=["grunt-asar@bwin/grunt-asar#update-asar",null]
+12 verbose parsed url { protocol: null,
+12 verbose parsed url   slashes: null,
+12 verbose parsed url   auth: null,
+12 verbose parsed url   host: null,
+12 verbose parsed url   port: null,
+12 verbose parsed url   hostname: null,
+12 verbose parsed url   hash: '#update-asar',
+12 verbose parsed url   search: null,
+12 verbose parsed url   query: null,
+12 verbose parsed url   pathname: 'grunt-asar@bwin/grunt-asar',
+12 verbose parsed url   path: 'grunt-asar@bwin/grunt-asar',
+12 verbose parsed url   href: 'grunt-asar@bwin/grunt-asar#update-asar' }
+13 verbose cache add name="grunt-asar" spec="bwin/grunt-asar#update-asar" args=["grunt-asar","bwin/grunt-asar#update-asar"]
+14 verbose parsed url { protocol: null,
+14 verbose parsed url   slashes: null,
+14 verbose parsed url   auth: null,
+14 verbose parsed url   host: null,
+14 verbose parsed url   port: null,
+14 verbose parsed url   hostname: null,
+14 verbose parsed url   hash: '#update-asar',
+14 verbose parsed url   search: null,
+14 verbose parsed url   query: null,
+14 verbose parsed url   pathname: 'bwin/grunt-asar',
+14 verbose parsed url   path: 'bwin/grunt-asar',
+14 verbose parsed url   href: 'bwin/grunt-asar#update-asar' }
+15 verbose addNamed [ 'grunt-asar', 'bwin/grunt-asar#update-asar' ]
+16 verbose addNamed [ null, null ]
+17 verbose already installed skipping grunt-contrib-concat@^0.5.1 /home/dech94/Documents/git/ggj2016
+18 verbose already installed skipping grunt-contrib-connect@^0.11.2 /home/dech94/Documents/git/ggj2016
+19 silly lockFile c9190fff-asar-bwin-grunt-asar-update-asar grunt-asar@bwin/grunt-asar#update-asar
+20 verbose lock grunt-asar@bwin/grunt-asar#update-asar /home/dech94/.npm/c9190fff-asar-bwin-grunt-asar-update-asar.lock
+21 info addNameTag [ 'grunt-asar', 'bwin/grunt-asar#update-asar' ]
+22 verbose already installed skipping grunt-contrib-copy@^0.8.2 /home/dech94/Documents/git/ggj2016
+23 verbose url raw grunt-asar
+24 verbose url resolving [ 'https://registry.npmjs.org/', './grunt-asar' ]
+25 verbose url resolved https://registry.npmjs.org/grunt-asar
+26 info trying registry request attempt 1 at 07:32:17
+27 verbose etag "C1L5EBO1Q6GA2TZGS0R730UDH"
+28 http GET https://registry.npmjs.org/grunt-asar
+29 verbose already installed skipping grunt-download-electron@^2.1.2 /home/dech94/Documents/git/ggj2016
+30 verbose already installed skipping grunt-contrib-uglify@^0.11.0 /home/dech94/Documents/git/ggj2016
+31 verbose already installed skipping grunt-processhtml@^0.3.8 /home/dech94/Documents/git/ggj2016
+32 verbose already installed skipping grunt-contrib-watch@^0.6.1 /home/dech94/Documents/git/ggj2016
+33 verbose already installed skipping grunt-replace@^0.11.0 /home/dech94/Documents/git/ggj2016
+34 verbose already installed skipping grunt@^0.4.5 /home/dech94/Documents/git/ggj2016
+35 http 304 https://registry.npmjs.org/grunt-asar
+36 silly registry.get cb [ 304,
+36 silly registry.get   { date: 'Sat, 30 Jan 2016 06:32:18 GMT',
+36 silly registry.get     via: '1.1 varnish',
+36 silly registry.get     'cache-control': 'max-age=300',
+36 silly registry.get     etag: '"C1L5EBO1Q6GA2TZGS0R730UDH"',
+36 silly registry.get     age: '0',
+36 silly registry.get     connection: 'keep-alive',
+36 silly registry.get     'x-served-by': 'cache-fra1237-FRA',
+36 silly registry.get     'x-cache': 'MISS',
+36 silly registry.get     'x-cache-hits': '0',
+36 silly registry.get     'x-timer': 'S1454135538.043260,VS0,VE416',
+36 silly registry.get     vary: 'Accept' } ]
+37 verbose etag grunt-asar from cache
+38 info maybeGithub Attempting bwin/grunt-asar#update-asar from git://github.com/bwin/grunt-asar#update-asar
+39 silly lockFile 7a353b84--com-bwin-grunt-asar-update-asar git://github.com/bwin/grunt-asar#update-asar
+40 verbose lock git://github.com/bwin/grunt-asar#update-asar /home/dech94/.npm/7a353b84--com-bwin-grunt-asar-update-asar.lock
+41 verbose addRemoteGit [ 'git://github.com/bwin/grunt-asar', 'update-asar' ]
+42 verbose git remote.origin.url git://github.com/bwin/grunt-asar
+43 verbose git fetch -a origin (git://github.com/bwin/grunt-asar)
+44 verbose git rev-list -n1 update-asar 7406ecbfb16817d0af6ca1a737f74a8acc2f8c61
+45 verbose resolved git url git://github.com/bwin/grunt-asar#7406ecbfb16817d0af6ca1a737f74a8acc2f8c61
+46 silly lockFile 559730d7-git-github-com-bwin-grunt-asar git://github.com/bwin/grunt-asar
+47 info maybeGithub Attempting bwin/grunt-asar#update-asar from git+ssh://git@github.com:bwin/grunt-asar#update-asar
+48 silly lockFile 942271ac--com-bwin-grunt-asar-update-asar git+ssh://git@github.com:bwin/grunt-asar#update-asar
+49 verbose lock git+ssh://git@github.com:bwin/grunt-asar#update-asar /home/dech94/.npm/942271ac--com-bwin-grunt-asar-update-asar.lock
+50 verbose addRemoteGit [ 'git@github.com:bwin/grunt-asar', 'update-asar' ]
+51 verbose git clone git@github.com:bwin/grunt-asar Clonage dans le dépôt nu '/home/dech94/.npm/_git-remotes/git-github-com-bwin-grunt-asar-ac650902'
+51 verbose git clone git@github.com:bwin/grunt-asar Permission denied (publickey).
+51 verbose git clone git@github.com:bwin/grunt-asar fatal: Could not read from remote repository.
+51 verbose git clone git@github.com:bwin/grunt-asar
+51 verbose git clone git@github.com:bwin/grunt-asar Please make sure you have the correct access rights
+51 verbose git clone git@github.com:bwin/grunt-asar and the repository exists.
+52 silly lockFile ac650902-git-github-com-bwin-grunt-asar git@github.com:bwin/grunt-asar
+53 silly lockFile c9190fff-asar-bwin-grunt-asar-update-asar grunt-asar@bwin/grunt-asar#update-asar
+54 silly lockFile c9190fff-asar-bwin-grunt-asar-update-asar grunt-asar@bwin/grunt-asar#update-asar
+55 error Error: No compatible version found: grunt-asar@'bwin/grunt-asar#update-asar'
+55 error Valid install targets:
+55 error ["0.1.0","0.1.1","0.1.2","0.1.3","0.1.4","0.1.5"]
+55 error     at installTargetsError (/usr/share/npm/lib/cache.js:719:10)
+55 error     at /usr/share/npm/lib/cache.js:638:10
+55 error     at saved (/usr/share/npm/node_modules/npm-registry-client/lib/get.js:142:7)
+55 error     at /usr/lib/nodejs/graceful-fs/polyfills.js:133:7
+55 error     at Object.oncomplete (fs.js:107:15)
+56 error If you need help, you may report this log at:
+56 error     <http://github.com/isaacs/npm/issues>
+56 error or email it to:
+56 error     <npm-@googlegroups.com>
+57 error System Linux 3.19.0-47-generic
+58 error command "/usr/bin/nodejs" "/usr/bin/npm" "install"
+59 error cwd /home/dech94/Documents/git/ggj2016
+60 error node -v v0.10.25
+61 error npm -v 1.3.10
+62 verbose exit [ 1, true ]

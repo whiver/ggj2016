@@ -3,6 +3,8 @@ game.GameOverScreen = me.ScreenObject.extend({
      *  action to perform on state change
      */
     onResetEvent: function() {
+        me.audio.stopTrack();
+        
         me.game.world.addChild(new me.ColorLayer("background", "#000000", 0));
         
         // add a new renderable component with the scrolling text
@@ -28,6 +30,8 @@ game.GameOverScreen = me.ScreenObject.extend({
             onDestroyEvent : function() {
             }
         })), 2);
+        
+        me.audio.play("looser");
     },
 
     /**
