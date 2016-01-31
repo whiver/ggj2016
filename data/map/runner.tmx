@@ -142,13 +142,7 @@
   </object>
  </objectgroup>
  <objectgroup name="fin">
-  <object id="23" name="me.LevelEntity" x="6305" y="-1" width="32" height="480">
-   <properties>
-    <property name="duration" value="150"/>
-    <property name="face" value="#fff"/>
-    <property name="to" value="victory"/>
-   </properties>
-  </object>
+  <object id="23" name="fin_runner" x="6336" y="0" width="32" height="480"/>
  </objectgroup>
  <objectgroup name="perso">
   <object id="25" name="player-run" x="63" y="351" width="25" height="64">

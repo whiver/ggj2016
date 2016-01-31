@@ -53,6 +53,7 @@ var game = {
         me.pool.register("player_victory", game.PlayerVictoryEntity);
         me.pool.register("obstacle_runner", game.ObstacleSportEntity);
         me.pool.register("mainBeerPlayer", game.PlayerBeerEntity);
+        me.pool.register("fin_runner", game.FinSportEntity);
 
         // enable the keyboard
         me.input.bindKey(me.input.KEY.LEFT,  "left");

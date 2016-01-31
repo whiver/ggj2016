@@ -72,3 +72,10 @@ game.ObstacleSportEntity = me.Entity.extend({
         return false;
     }
 });
+
+game.FinSportEntity = me.Entity.extend({
+    onCollision : function (response, other) {
+        me.state.change(me.state.VICTORY);
+        return false;
+    }
+});
