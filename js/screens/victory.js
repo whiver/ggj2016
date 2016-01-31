@@ -3,8 +3,9 @@ game.PlayScreenVictory = me.ScreenObject.extend({
      *  action to perform on state change
      */
     onResetEvent: function() {
-        me.levelDirector.loadLevel("victory");
+        me.levelDirector.loadLevel("victory-level");
         me.audio.stopTrack();
+        me.audio.play("victory")
     },
 
     /**
