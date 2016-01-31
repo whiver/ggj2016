@@ -67,10 +67,6 @@ game.TitleScreen = me.ScreenObject.extend({
                 me.audio.play("cling");
                 me.state.change(me.state.BEER);
             }
-            else if (action === "n") {
-                me.audio.play("cling");
-                me.state.change(me.state.M);
-            }
         });
     },
 
