@@ -12,7 +12,7 @@ var game = {
     // Run on page load.
     "onload" : function () {
         // Initialize the video.
-        if (!me.video.init(960, 640, {wrapper : "screen", scale : "auto"})) {
+        if (!me.video.init(960, 512, {wrapper : "screen", scale : "auto"})) {
             alert("Your browser does not support HTML5 canvas.");
             return;
         }
@@ -40,10 +40,15 @@ var game = {
     // Run on game resources loaded.
     "loaded" : function () {
         me.state.set(me.state.MENU, new game.TitleScreen());
-        me.state.set(me.state.PLAY, new game.PlayScreen());
+        me.state.set(me.state.PLAY, new game.PlayScreenSport());
+        me.state.set(me.state.GAMEOVER, new game.GameOverScreen());
 
         // add our player entity in the entity pool
-        me.pool.register("mainPlayer", game.PlayerEntity);
+        me.pool.register("player-run", game.PlayerSportEntity);
+        me.pool.register("player_victory", game.PlayerVictoryEntity);
+        me.pool.register("obstacle_runner", game.ObstacleSportEntity);
+        
+        me.input.bindKey(me.input.KEY.SPACE, "jump", true);
 
         // Start the game.
         me.state.change(me.state.PLAY);

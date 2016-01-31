@@ -1,7 +1,7 @@
 /**
  * Player Entity
  */
-game.PlayerEntity = me.Entity.extend({
+game.PlayerVictoryEntity = me.Entity.extend({
 
     /**
      * constructor
@@ -9,6 +9,7 @@ game.PlayerEntity = me.Entity.extend({
     init:function (x, y, settings) {
         // call the constructor
         this._super(me.Entity, 'init', [x, y , settings]);
+        this.body.gravity = 0;
     },
 
     /**
