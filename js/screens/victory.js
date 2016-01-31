@@ -6,7 +6,7 @@ game.PlayScreenVictory = me.ScreenObject.extend({
         me.levelDirector.loadLevel("victory-level");
         me.audio.stopTrack();
         me.audio.play("victory");
-        me.timer.setTimeout(function () {me.state.change(me.state.SPORT)},5000);
+        me.timer.setTimeout(function () {me.state.change(me.state.MENU)},5000);
     },
 
     /**
