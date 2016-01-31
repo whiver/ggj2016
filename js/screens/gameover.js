@@ -32,6 +32,7 @@ game.GameOverScreen = me.ScreenObject.extend({
         })), 2);
         
         me.audio.play("looser");
+        me.timer.setTimeout(function () {me.state.change(me.state.SPORT)}, 3000);
     },
 
     /**
